@@ -24,3 +24,8 @@ def decrypt(ciphertext, private_key):
                      algorithm=hashes.SHA256(),
                      label=None)
     ).decode()
+
+def encrypt(message, public_key):
+    return public_key.encrypt(
+        message.encode()
+    )
